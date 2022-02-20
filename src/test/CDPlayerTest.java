@@ -1,13 +1,14 @@
 package test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 import main.MachineInterpreter;
 import main.StateMachine;
 import main.metamodel.Machine;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static junit.framework.Assert.assertEquals;
 
 public class CDPlayerTest {
 	

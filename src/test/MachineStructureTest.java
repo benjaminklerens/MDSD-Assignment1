@@ -100,15 +100,15 @@ public class MachineStructureTest {
 		List<Transition> transitions = state.getTransitions();
 		assertEquals(2, transitions.size());
 		assertTrue(transitions.stream().anyMatch(transition -> transition.getEvent().equals("change to 2")));
-		assertEquals("state 2", state.getTransitionByEvent("change to 2").getTarget().getName());
+		assertEquals("state 2", state.getTransitionsByEvent("change to 2").getTarget().getName());
 		assertTrue(transitions.stream().anyMatch(transition -> transition.getEvent().equals("change to 3")));
-		assertEquals("state 3", state.getTransitionByEvent("change to 3").getTarget().getName());
+		assertEquals("state 3", state.getTransitionsByEvent("change to 3").getTarget().getName());
 		
 		state = m.getState("state 2");
 		transitions = state.getTransitions();
 		assertEquals(1, transitions.size());
 		assertTrue(transitions.stream().anyMatch(transition -> transition.getEvent().equals("change to 3")));
-		assertEquals("state 3", state.getTransitionByEvent("change to 3").getTarget().getName());
+		assertEquals("state 3", state.getTransitionsByEvent("change to 3").getTarget().getName());
 	}
 	
 	@Test
